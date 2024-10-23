@@ -1,0 +1,464 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.080 --> 00:00:04.360
+I always thought, isn't it strange, and nobody&nbsp;
+ever talked about this in any biology class&nbsp;&nbsp;
+
+00:00:04.360 --> 00:00:11.640
+that I've ever had, isn't it strange that the&nbsp;
+animal that is the most regenerative, apparently&nbsp;&nbsp;
+
+00:00:11.640 --> 00:00:18.600
+immortal, they don't age, cancer resistant, and by&nbsp;
+the way, resistant to transgenes, so nobody still,&nbsp;&nbsp;
+
+00:00:18.600 --> 00:00:23.720
+nobody's been able to make transgenic worms,&nbsp;
+is also the one with the most chaotic genome.&nbsp;&nbsp;
+
+00:00:23.720 --> 00:00:28.280
+And that's bizarre, you would think, but from&nbsp;
+everything that we are told about genomes and&nbsp;&nbsp;
+
+00:00:28.280 --> 00:00:35.160
+how they determine phenotypes, that the animal&nbsp;
+with all those amazing properties should have&nbsp;&nbsp;
+
+00:00:35.160 --> 00:00:40.200
+really pristine hardware. You would think that&nbsp;
+you should have a really clean, really stable&nbsp;&nbsp;
+
+00:00:40.200 --> 00:00:44.520
+genome if you're going to be regenerative, and&nbsp;
+cancer resistant, and not age, and whatever,&nbsp;&nbsp;
+
+00:00:44.520 --> 00:00:49.520
+it's the exact opposite. I always thought that&nbsp;
+was incredibly weird. And so finally, I think,&nbsp;&nbsp;
+
+00:00:49.520 --> 00:00:54.520
+and we've done some computational work now to&nbsp;
+show why this is, I think we now understand&nbsp;&nbsp;
+
+00:00:54.520 --> 00:00:59.920
+what's happening. What I think is happening is&nbsp;
+this, imagine, let's go back to this issue of&nbsp;&nbsp;
+
+00:01:01.000 --> 00:01:07.680
+developmental problem solving. So if you had a&nbsp;
+passive material, such that you've got some genes,&nbsp;&nbsp;
+
+00:01:07.680 --> 00:01:11.360
+the genes determine what the material&nbsp;
+does, and so therefore you have an outcome,&nbsp;&nbsp;
+
+00:01:11.360 --> 00:01:16.120
+and that outcome gets selected, you know, either&nbsp;
+it does well or not, and then there's differential&nbsp;&nbsp;
+
+00:01:16.120 --> 00:01:21.080
+reproduction. So the standard story of evolution.&nbsp;
+Then everything works well, and everything works&nbsp;&nbsp;
+
+00:01:21.080 --> 00:01:26.360
+like it would in a genetic algorithm. Very&nbsp;
+simple. The problem with it, of course,&nbsp;&nbsp;
+
+00:01:26.360 --> 00:01:32.400
+is that it takes forever. Because let's say&nbsp;
+that you're a tadpole, and you have a mutation,&nbsp;&nbsp;
+
+00:01:32.400 --> 00:01:36.680
+mutations usually do multiple things. Let's say&nbsp;
+this mutation makes your mouth be off kilter,&nbsp;&nbsp;
+
+00:01:36.680 --> 00:01:39.840
+but it also does something else somewhere else&nbsp;
+in the tail, something positive somewhere in the&nbsp;&nbsp;
+
+00:01:39.840 --> 00:01:46.960
+tail. Under the standard evolutionary paradigm,&nbsp;
+you would never get to experience the positive&nbsp;&nbsp;
+
+00:01:46.960 --> 00:01:51.040
+effects of that mutation, because with the mouth&nbsp;
+being off, you would die, and that would be that.&nbsp;&nbsp;
+
+00:01:51.040 --> 00:01:54.800
+So selection would weed you out very quickly,&nbsp;
+and you would have to wait for a new mutation&nbsp;&nbsp;
+
+00:01:54.800 --> 00:01:59.560
+that gives you the positive effects without the&nbsp;
+bad effects on the mouth. So it's very hard to&nbsp;&nbsp;
+
+00:01:59.560 --> 00:02:04.840
+make new changes without ripping up old gains&nbsp;
+and so on. So that's some of the limitations&nbsp;&nbsp;
+
+00:02:04.840 --> 00:02:11.560
+of that kind of view. But a much more realistic&nbsp;
+scenario is the fact that you don't go straight&nbsp;&nbsp;
+
+00:02:11.560 --> 00:02:15.720
+from a genotype to the phenotype. You don't go&nbsp;
+from the genes to the actual body. There's this&nbsp;&nbsp;
+
+00:02:15.720 --> 00:02:19.840
+layer of development in the middle, and the thing&nbsp;
+about development is not just that it's complex,&nbsp;&nbsp;
+
+00:02:19.840 --> 00:02:24.520
+it's that it's intelligent, meaning it has&nbsp;
+problem-solving competencies. So what actually&nbsp;&nbsp;
+
+00:02:24.520 --> 00:02:30.160
+happens in tadpoles is if I move the mouth off&nbsp;
+to the side of the head, within a few weeks,&nbsp;&nbsp;
+
+00:02:30.160 --> 00:02:38.280
+it comes back to normal on its own, meaning it&nbsp;
+can reach again that region of anatomical space&nbsp;&nbsp;
+
+00:02:38.280 --> 00:02:45.120
+where it wants to be. So imagine what this means&nbsp;
+for evolution when you're evolving a competent&nbsp;&nbsp;
+
+00:02:45.120 --> 00:02:50.640
+substrate, not a passive substrate. By the time&nbsp;
+a nice tadpole goes up for selection to see&nbsp;&nbsp;
+
+00:02:50.640 --> 00:02:55.280
+whether it gets to reproduce or not, evolution&nbsp;
+can't really see whether it looks good because&nbsp;&nbsp;
+
+00:02:55.280 --> 00:03:00.400
+the genome was great or because the genome was&nbsp;
+actually so-so, but it fixed whatever issue it&nbsp;&nbsp;
+
+00:03:00.400 --> 00:03:06.960
+had. So that competency starts to hide information&nbsp;
+from selection. So selection finds it kind of hard&nbsp;&nbsp;
+
+00:03:06.960 --> 00:03:11.640
+to choose the best genome because even the ones&nbsp;
+with problems look pretty good by the time it's&nbsp;&nbsp;
+
+00:03:11.640 --> 00:03:16.960
+time to be selected. So what happens, and we&nbsp;
+did computational simulations of all this,&nbsp;&nbsp;
+
+00:03:16.960 --> 00:03:25.000
+what happens is that when you do this, evolution&nbsp;
+ends up spending all of its effort ramping up the&nbsp;&nbsp;
+
+00:03:25.000 --> 00:03:30.160
+competency because it doesn't see the structural&nbsp;
+genes. All it sees is the competency mechanism.&nbsp;&nbsp;
+
+00:03:30.160 --> 00:03:34.400
+And if you improve the competency mechanism, well,&nbsp;
+that makes it even harder to see the genome. And&nbsp;&nbsp;
+
+00:03:34.400 --> 00:03:39.120
+so you have this ratchet, you have this positive&nbsp;
+feedback loop where the more competent the&nbsp;&nbsp;
+
+00:03:39.120 --> 00:03:43.600
+material is, the harder it is to evolve the actual&nbsp;
+genome. All the pressure is now on the competency.&nbsp;&nbsp;
+
+00:03:43.600 --> 00:03:53.520
+So you end up with kind of like a ladder, really&nbsp;
+an intelligence ratchet. And people like Steve&nbsp;&nbsp;
+
+00:03:53.520 --> 00:03:59.280
+Frank and others have pointed this out in other&nbsp;
+aspects of biology and also in technology.&nbsp;&nbsp;
+
+00:04:01.520 --> 00:04:06.760
+Once RAID array technology came up, it became not&nbsp;
+as important to have really pristine and stable&nbsp;&nbsp;
+
+00:04:06.760 --> 00:04:13.480
+disk media because the RAID takes care of it. So&nbsp;
+the pressure on having really, really stable disk&nbsp;&nbsp;
+
+00:04:13.480 --> 00:04:20.040
+is off. So what it means is that in the case&nbsp;
+of the planaria, that positive feedback loop,&nbsp;&nbsp;
+
+00:04:20.040 --> 00:04:25.120
+that ratchet went all the way to the end. That&nbsp;
+basically what happened here is that what you've&nbsp;&nbsp;
+
+00:04:25.120 --> 00:04:30.480
+got is an organism where it is assumed that your&nbsp;
+hardware is crap. It's assumed that you're full&nbsp;&nbsp;
+
+00:04:30.480 --> 00:04:34.680
+of mutations. All the cells have different numbers&nbsp;
+of chromosomes. We already know the genetics are&nbsp;&nbsp;
+
+00:04:34.680 --> 00:04:40.200
+all over the place. But all of the effort went&nbsp;
+into developing an algorithm that can do the&nbsp;&nbsp;
+
+00:04:40.200 --> 00:04:46.440
+necessary error correction and take that journey&nbsp;
+in morphospace no matter what the hardware looks&nbsp;&nbsp;
+
+00:04:46.440 --> 00:04:51.720
+like. That is why they don't age. That is why&nbsp;
+they're resistant to cancer. And that's why nobody&nbsp;&nbsp;
+
+00:04:51.720 --> 00:04:57.080
+can make a transgenic worm because they really&nbsp;
+pay less attention to their genome in that sense&nbsp;&nbsp;
+
+00:04:57.080 --> 00:05:02.520
+than many other organisms. So you can imagine&nbsp;
+a sort of continuum. So you've got something&nbsp;&nbsp;
+
+00:05:02.520 --> 00:05:07.240
+like C. elegans, the nematode, where they're&nbsp;
+pretty cookie cutters. So as far as we know,&nbsp;&nbsp;
+
+00:05:07.240 --> 00:05:12.680
+they don't regenerate much. What the genome&nbsp;
+says is pretty much what you get. Then you've&nbsp;&nbsp;
+
+00:05:12.680 --> 00:05:17.240
+got some mammals. So mammals, at least in the&nbsp;
+embryonic stages, they've got some competency.&nbsp;&nbsp;
+
+00:05:17.240 --> 00:05:23.280
+You can chop early mammalian embryos into pieces&nbsp;
+and you get twins and triplets and so on. Then&nbsp;&nbsp;
+
+00:05:23.280 --> 00:05:29.200
+you get salamanders. Salamanders are quite good&nbsp;
+regenerators. They're quite resistant to cancer.&nbsp;&nbsp;
+
+00:05:29.200 --> 00:05:35.920
+They are long lived. And then, you know, when&nbsp;
+you run that spiral all the way to the end,&nbsp;&nbsp;
+
+00:05:35.920 --> 00:05:39.840
+you get planaria, which are these amazing things&nbsp;
+that have committed to the fact that the hardware&nbsp;&nbsp;
+
+00:05:39.840 --> 00:05:44.520
+is going to be noisy and that all the effort is&nbsp;
+going to go into an amazing algorithm that lets&nbsp;&nbsp;
+
+00:05:44.520 --> 00:05:48.840
+them do their thing. And that's why if you're&nbsp;
+going to make lines of weird planaria, targeting&nbsp;&nbsp;
+
+00:05:48.840 --> 00:05:55.760
+the structural genome is not helpful. But if you&nbsp;
+screw with the actual mechanisms that enable the&nbsp;&nbsp;
+
+00:05:55.760 --> 00:06:00.680
+error correction, aka the bioelectricity, that's&nbsp;
+when you can make lines of double-headed and so&nbsp;&nbsp;
+
+00:06:00.680 --> 00:06:08.120
+on. Because now you're targeting the actual, you&nbsp;
+know, the problem-solving machinery. If you were&nbsp;&nbsp;
+
+00:06:08.120 --> 00:06:12.720
+to look at the genome of the salamander versus the&nbsp;
+C. elegans, would the C. elegans be more chaotic&nbsp;&nbsp;
+
+00:06:12.720 --> 00:06:17.600
+or more ordered than the salamander? It's a good&nbsp;
+question. So nobody's done that specifically,&nbsp;&nbsp;
+
+00:06:18.280 --> 00:06:22.840
+as far as I know. This is something that we're&nbsp;
+just ramping up to do now, is to start... Because&nbsp;&nbsp;
+
+00:06:22.840 --> 00:06:28.560
+correct me if I'm incorrect, it sounds like the&nbsp;
+hypothesis is that if you have a large amount of&nbsp;&nbsp;
+
+00:06:28.560 --> 00:06:34.520
+genetic chaos, or if you can quantify that, then&nbsp;
+you would have something that would be compensated&nbsp;&nbsp;
+
+00:06:34.520 --> 00:06:40.320
+for in terms of competency or some higher level&nbsp;
+structure. Yeah, I think that's a prediction of&nbsp;&nbsp;
+
+00:06:40.320 --> 00:06:46.160
+this model that I just laid out. And so, yeah, so&nbsp;
+we can test that. I mean, a part of it also is,&nbsp;&nbsp;
+
+00:06:46.160 --> 00:06:49.360
+there's an ecological component. I mean, you could&nbsp;
+ask the question, so why doesn't everything end&nbsp;&nbsp;
+
+00:06:49.360 --> 00:06:55.200
+up like planaria? And I think there's an aspect&nbsp;
+of this that... That ratchet obviously doesn't&nbsp;&nbsp;
+
+00:06:55.200 --> 00:06:59.720
+run to the end in every scenario, because&nbsp;
+in some species there's a better trade-off&nbsp;&nbsp;
+
+00:06:59.720 --> 00:07:03.200
+to be had somewhere else. I wonder if there&nbsp;
+are three components then, because then,&nbsp;&nbsp;
+
+00:07:03.200 --> 00:07:08.440
+if you don't see a direct correlation, it could&nbsp;
+be hidden by a third factor. Yeah, which I think&nbsp;&nbsp;
+
+00:07:08.440 --> 00:07:13.720
+would probably be environment. It would probably&nbsp;
+be the ecology of how do you reproduce, you know,&nbsp;&nbsp;
+
+00:07:13.720 --> 00:07:17.320
+how noisy, how dangerous, how unpredictable is&nbsp;
+your environment. I'm going to guess there's&nbsp;&nbsp;
+
+00:07:17.320 --> 00:07:24.560
+something like that involved here. Yeah, but I&nbsp;
+think that's starting to kind of explain what's&nbsp;&nbsp;
+
+00:07:24.560 --> 00:07:34.920
+going on with planaria. And that, yeah, so we&nbsp;
+found the persistence of the two-headed phenotype,&nbsp;&nbsp;
+
+00:07:34.920 --> 00:07:40.920
+and then Nestor Oviedo and Junji Murakuma&nbsp;
+in my group wrote a nice paper on that,&nbsp;&nbsp;
+
+00:07:40.920 --> 00:07:49.680
+and so on. And the next kind of big advance there&nbsp;
+in 2017 was by Fallon Durant, a grad student in&nbsp;&nbsp;
+
+00:07:49.680 --> 00:07:56.880
+my lab who also did something interesting. So when&nbsp;
+you take a bunch of worms and you treat them with,&nbsp;&nbsp;
+
+00:07:56.880 --> 00:08:00.840
+let's say, this reagent that blocks the gap&nbsp;
+junctions, typically what you see is, okay,&nbsp;&nbsp;
+
+00:08:00.840 --> 00:08:07.560
+you treat 100 worms, 70% of them go on to make two&nbsp;
+heads, and 30% are unaffected. So we thought they&nbsp;&nbsp;
+
+00:08:07.560 --> 00:08:12.680
+were unaffected because they stay one-headed, and&nbsp;
+we always called them escapees because we thought&nbsp;&nbsp;
+
+00:08:12.680 --> 00:08:16.360
+that they somehow just escaped the action of the&nbsp;
+octanol. Maybe their skin was a little thicker or&nbsp;&nbsp;
+
+00:08:16.360 --> 00:08:20.960
+something, and we never had a good explanation&nbsp;
+for it. But anyway, you know, there was a 70%&nbsp;&nbsp;
+
+00:08:20.960 --> 00:08:25.960
+penetrance to the phenotype, and most things have&nbsp;
+not a 100% phenotype, so it wasn't— Penetrance?&nbsp;&nbsp;
+
+00:08:25.960 --> 00:08:30.680
+Penetrance just means that when you apply some&nbsp;
+treatment to a population, not all of them&nbsp;&nbsp;
+
+00:08:30.680 --> 00:08:34.360
+have an effect and not all of them have the same&nbsp;
+effect. That's true for pretty much every drug,&nbsp;&nbsp;
+
+00:08:34.360 --> 00:08:42.160
+every mutation, and so on. So for years, we called&nbsp;
+them escapees. And then around 2015, when Fallon&nbsp;&nbsp;
+
+00:08:42.160 --> 00:08:50.960
+joined the lab, she recut some of those one-headed&nbsp;
+escapees and found that they also do 70-30,&nbsp;&nbsp;
+
+00:08:50.960 --> 00:08:56.960
+that 70% of them became double-headed and 30%&nbsp;
+didn't. And so what we realized was that they're&nbsp;&nbsp;
+
+00:08:56.960 --> 00:09:01.240
+not actually escapees. They're not unaffected.&nbsp;
+They're affected. But the way they're affected is&nbsp;&nbsp;
+
+00:09:01.240 --> 00:09:06.160
+quite different. They are randomized. They can't&nbsp;
+tell if they should be one-headed or two-headed,&nbsp;&nbsp;
+
+00:09:06.160 --> 00:09:11.760
+and they flip a coin with a 70-30 bias about what&nbsp;
+they should do in any given generation. In fact,&nbsp;&nbsp;
+
+00:09:11.760 --> 00:09:15.040
+we were able to show that when you cut&nbsp;
+multiple pieces from the same worm—and&nbsp;&nbsp;
+
+00:09:15.040 --> 00:09:18.840
+we call them cryptic worms, cryptic because&nbsp;
+physically they look completely normal, one head,&nbsp;&nbsp;
+
+00:09:18.840 --> 00:09:23.480
+one tail. They look normal, but they're not normal&nbsp;
+because if you recut them, they're not sure what&nbsp;&nbsp;
+
+00:09:23.480 --> 00:09:29.600
+to do. Their memories are bistable. So what&nbsp;
+happens is that you can cut them into pieces, and&nbsp;&nbsp;
+
+00:09:29.600 --> 00:09:33.040
+every piece makes its own decision if it's going&nbsp;
+to be one-headed or two-headed, even though they&nbsp;&nbsp;
+
+00:09:33.040 --> 00:09:42.240
+came from the same parent organism with the same&nbsp;
+roughly 70-30 frequency. So that's another kind&nbsp;&nbsp;
+
+00:09:42.240 --> 00:09:47.080
+of permanent line. And the way we studied it more&nbsp;
+recently was as a kind of perceptual bistability.&nbsp;&nbsp;
+
+00:09:47.080 --> 00:09:50.720
+So like the rabbit-duck illusion, right? You look&nbsp;
+at it, and it looks like one thing, looks like&nbsp;&nbsp;
+
+00:09:50.720 --> 00:09:54.720
+something else. That's kind of what's happening&nbsp;
+here. There's a bioelectrical pattern that can&nbsp;&nbsp;
+
+00:09:54.720 --> 00:09:59.520
+be interpreted in one of two ways, and that's&nbsp;
+why they're confused. They're sort of bistable,&nbsp;&nbsp;
+
+00:09:59.520 --> 00:10:06.800
+and they can fall in either direction. So that's&nbsp;
+another thing we did in Planaria. If you enjoyed&nbsp;&nbsp;
+
+00:10:06.800 --> 00:10:11.360
+this TOE-clipping, then the full video is&nbsp;
+linked in the description. Don't forget to&nbsp;&nbsp;
+
+00:10:11.360 --> 00:10:18.200
+follow Theories of Everything with Curt Jaimungal&nbsp;
+on Spotify for exclusive content and in-depth&nbsp;&nbsp;
+
+00:10:18.200 --> 00:10:25.440
+discussions. Your support on Spotify helps us grow&nbsp;
+and to reach more curious minds like yours. Check&nbsp;&nbsp;
+
+00:10:25.440 --> 00:10:32.360
+out the link in the description and join the Core&nbsp;
+TOE community on Spotify today. See you there.
+
