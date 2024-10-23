@@ -11,19 +11,6 @@ from tqdm import tqdm
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-import os
-import sys
-import logging
-import time
-import argparse
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
-from tqdm import tqdm
-
-# Set up logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
-
 def validate_id(id_value, id_type):
     if id_type not in ["playlist", "channel", "video"]:
         raise ValueError(f"Invalid id_type: {id_type}. Must be 'playlist', 'channel', or 'video'.")
@@ -31,17 +18,11 @@ def validate_id(id_value, id_type):
     # Existing validation logic for each type
     if id_type == "playlist" and not id_value.startswith("PL"):
         raise ValueError("Invalid playlist ID. Must start with 'PL'.")
-    elif id_type == "channel" and not id_value.startswith("UU"):
-        raise ValueError("Invalid channel ID. Must start with 'UU'.")
+    elif id_type == "channel" and not id_value.startswith("U"):
+        raise ValueError("Invalid channel ID. Must start with 'U'.")
     elif id_type == "video" and not id_value.isalnum():
         raise ValueError("Invalid video ID. Must be alphanumeric.")
     
-    return id_value
-    """Validate the input ID."""
-    if not id_value or not isinstance(id_value, str):
-        raise ValueError("ID must be a non-empty string")
-    if id_type == 'playlist' and not id_value.startswith('PL'):
-        raise ValueError("Invalid playlist ID format")
     return id_value
 
 def get_video_urls(youtube, id, is_playlist=True):
@@ -120,7 +101,8 @@ def main():
     try:
         youtube = build('youtube', 'v3', developerKey=api_key)
         
-        id_value = validate_id(args.id_value)
+        # Pass both id_value and id_type to validate_id
+        id_value = validate_id(args.id_value, args.id_type)
         logger.info(f"Fetching URLs for {args.id_type} with ID: {id_value}")
         
         urls = get_video_urls(youtube, id_value, is_playlist=(args.id_type == 'playlist'))
