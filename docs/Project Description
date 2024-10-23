@@ -1,15 +1,21 @@
-### Project Roadmap
+### Global Project Description
 
+**Project Name**: Podcast Semantic Search Tool
+
+**Objective**:  
+The goal of this project is to build a tool that allows users to search across thousands of hours of podcast content. By using speech-to-text technology to transcribe audio, creating embeddings of the text, and developing a semantic search system, users will be able to find specific discussions, topics, or key moments in a large volume of podcast material. The tool will also allow users to download or play only the relevant sections of a podcast based on their search results.
+
+**Components of the Project**:
 1. **URL Generator (Component 1)**:
    - **Input**: YouTube Playlist ID or Channel ID.
    - **Output**: A text file (`urls.txt`) containing a list of YouTube video URLs.
 
-2. **Audio Downloader (Component 2)**:
-   - **Input**: A list of URLs (`urls.txt` from Component 1).
-   - **Output**: Audio files in `.mp3` format stored locally.
+2. **Subtitle Downloader (Component 2)**:
+   - **Input**: A list of URLs (`urls.txt` from Component 1) This will be a text file with one URL per line.
+   - **Output**: subtitle files in the srt format stored locally.
 
-3. **Transcription Service (Component 3)**:
-   - **Input**: Audio files in `.mp3` format (from Component 2).
+3. **JSON Generator (Component 3)**:
+   - **Input**: subtitle files in the srt format (from Component 2).
    - **Output**: Transcriptions with timestamps in `.json` format.
 
 4. **Embedding Generator (Component 4)**:
