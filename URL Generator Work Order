@@ -1,0 +1,61 @@
+### Work Order for Component 1: URL Generator
+
+**Objective**:  
+Develop a script that generates a list of YouTube video URLs from playlists or channels. This list will be used to download podcast audio files in later stages of the project.
+
+**Input**:  
+- YouTube Playlist ID or Channel ID (e.g., `PL12345ABCDE`).
+
+**Output**:  
+- A text file (`urls.txt`) containing one YouTube video URL per line, formatted like this:
+https://www.youtube.com/watch?v=example2
+
+**Requirements**:
+1. Use the **YouTube Data API v3** to retrieve a list of video URLs from a YouTube playlist or channel.
+2. The script should:
+ - Take a **playlist ID** or **channel ID** as input.
+ - Retrieve the list of all video URLs from that playlist or channel.
+ - Support large playlists with pagination (if the playlist has more than 50 videos).
+ - Save the list of video URLs to a text file (`urls.txt`).
+
+**Technical Specifications**:
+1. The script should be written in **Python**.
+2. Use the **Google API client library** to interact with the YouTube Data API.
+3. Include basic error handling for cases where the playlist or channel is not found or the API key is invalid.
+4. The YouTube API key should be provided via environment variables for security.
+
+**Deliverables**:
+1. A Python script (`url_generator.py`) that:
+ - Accepts a playlist ID or channel ID as an argument.
+ - Outputs a text file (`urls.txt`) containing a list of video URLs.
+
+**Resources**:
+- [YouTube Data API Documentation](https://developers.google.com/youtube/v3/docs)
+- [Google API Python Client Library](https://github.com/googleapis/google-api-python-client)
+
+**Example API Call**:
+```python
+from googleapiclient.discovery import build
+
+# Function to fetch video URLs from a YouTube playlist
+def get_video_urls(api_key, playlist_id):
+  youtube = build('youtube', 'v3', developerKey=api_key)
+  video_urls = []
+  request = youtube.playlistItems().list(
+      part="snippet",
+      playlistId=playlist_id,
+      maxResults=50
+  )
+  response = request.execute()
+  
+  for item in response['items']:
+      video_id = item['snippet']['resourceId']['videoId']
+      video_urls.append(f"https://www.youtube.com/watch?v={video_id}")
+  
+  return video_urls
+
+# Example usage
+api_key = "YOUR_API_KEY"
+playlist_id = "YOUR_PLAYLIST_ID"
+urls = get_video_urls(api_key, playlist_id)
+print(urls)

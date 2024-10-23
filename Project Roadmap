@@ -1,0 +1,33 @@
+### Project Roadmap
+
+1. **URL Generator (Component 1)**:
+   - **Input**: YouTube Playlist ID or Channel ID.
+   - **Output**: A text file (`urls.txt`) containing a list of YouTube video URLs.
+
+2. **Audio Downloader (Component 2)**:
+   - **Input**: A list of URLs (`urls.txt` from Component 1).
+   - **Output**: Audio files in `.mp3` format stored locally.
+
+3. **Transcription Service (Component 3)**:
+   - **Input**: Audio files in `.mp3` format (from Component 2).
+   - **Output**: Transcriptions with timestamps in `.json` format.
+
+4. **Embedding Generator (Component 4)**:
+   - **Input**: Transcribed text segments with timestamps (`.json` from Component 3).
+   - **Output**: Embeddings (numerical vectors) stored in a vector database, with the text and timestamps.
+
+5. **Vector Database (Component 5)**:
+   - **Input**: Embeddings, text, and timestamps.
+   - **Output**: Queryable embeddings for semantic search.
+
+6. **Search Engine (Component 6)**:
+   - **Input**: User query (natural language).
+   - **Output**: List of relevant text segments, timestamps, and podcast identifiers.
+
+7. **Clip Downloader (Component 7)**:
+   - **Input**: Timestamps and YouTube video URLs.
+   - **Output**: Downloaded `.mp3` clips of the relevant podcast sections.
+
+8. **User Interface (Component 8)**:
+   - **Input**: User query (natural language).
+   - **Output**: Displayed search results with text, timestamps, and links to download or play the relevant audio clips.

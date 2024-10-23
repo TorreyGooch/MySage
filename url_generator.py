@@ -25,6 +25,18 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 def validate_id(id_value, id_type):
+    if id_type not in ["playlist", "channel", "video"]:
+        raise ValueError(f"Invalid id_type: {id_type}. Must be 'playlist', 'channel', or 'video'.")
+    
+    # Existing validation logic for each type
+    if id_type == "playlist" and not id_value.startswith("PL"):
+        raise ValueError("Invalid playlist ID. Must start with 'PL'.")
+    elif id_type == "channel" and not id_value.startswith("UU"):
+        raise ValueError("Invalid channel ID. Must start with 'UU'.")
+    elif id_type == "video" and not id_value.isalnum():
+        raise ValueError("Invalid video ID. Must be alphanumeric.")
+    
+    return id_value
     """Validate the input ID."""
     if not id_value or not isinstance(id_value, str):
         raise ValueError("ID must be a non-empty string")
@@ -126,5 +138,6 @@ def main():
         logger.error(f"Invalid input: {e}")
         sys.exit(1)
 
+# Run the script
 if __name__ == "__main__":
     main()

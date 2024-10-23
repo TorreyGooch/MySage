@@ -1,0 +1,35 @@
+### Global Project Description
+
+**Project Name**: Podcast Semantic Search Tool
+
+**Objective**:  
+The goal of this project is to build a tool that allows users to search across thousands of hours of podcast content. By using speech-to-text technology to transcribe audio, creating embeddings of the text, and developing a semantic search system, users will be able to find specific discussions, topics, or key moments in a large volume of podcast material. The tool will also allow users to download or play only the relevant sections of a podcast based on their search results.
+
+**Components of the Project**:
+1. **Audio Downloader**:
+   - **Input**: A list of YouTube video URLs (from the URL Generator).
+   - **Output**: Audio files in `.mp3` format, stored locally for further processing.
+
+2. **Transcription**:
+   - **Input**: Audio files (`.mp3` format).
+   - **Output**: Transcription text files with timestamps in `.json` format (e.g., `{ "text": "This is a podcast", "start_time": "00:01:23", "end_time": "00:01:30" }`).
+
+3. **Embedding Generator**:
+   - **Input**: Transcribed text segments with timestamps (`.json` format).
+   - **Output**: Embeddings (numerical vectors) stored in a vector database, along with the corresponding text and timestamps.
+
+4. **Vector Database**:
+   - **Input**: Embeddings, text, and timestamps.
+   - **Output**: Queryable storage of embeddings, allowing for fast semantic search across the podcast library.
+
+5. **Search Engine**:
+   - **Input**: User query (natural language text).
+   - **Output**: List of relevant text segments, along with corresponding timestamps and podcast identifiers.
+
+6. **Clip Downloader**:
+   - **Input**: Timestamps and YouTube video URLs.
+   - **Output**: Audio clips of the relevant podcast segment in `.mp3` format.
+
+7. **User Interface (UI)**:
+   - **Input**: User query (natural language text).
+   - **Output**: Search results, including text, timestamps, and links to download or play the relevant audio clips.
