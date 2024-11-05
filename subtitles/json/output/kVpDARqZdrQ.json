@@ -1,0 +1,23 @@
+{
+  "video_id": "kVpDARqZdrQ",
+  "sentences": [
+    {
+      "id": 1,
+      "text": "[Music] [Music] do do do [Music]",
+      "start_time": "00:03:15.350",
+      "end_time": "00:03:53.800"
+    },
+    {
+      "id": 2,
+      "text": "[Music] so",
+      "start_time": "00:03:15.350",
+      "end_time": "00:03:53.800"
+    },
+    {
+      "id": 3,
+      "text": "so so [Music]",
+      "start_time": "00:03:15.350",
+      "end_time": "00:03:53.800"
+    }
+  ]
+}

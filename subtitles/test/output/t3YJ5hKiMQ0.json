@@ -1,0 +1,83 @@
+{
+  "video_id": "t3YJ5hKiMQ0",
+  "sentences": [
+    {
+      "id": 1,
+      "text": "hi everyone today we are continuing our hi everyone today we are continuing our implementation of make more our favorite implementation of make more our favorite implementation of make more our favorite character level language model character level language model character level language model",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 2,
+      "text": "now you'll notice that the background now you'll notice that the background now you'll notice that the background behind me is different that's because I behind me is different that's because I behind me is different that's because I am in Kyoto and it is awesome",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 3,
+      "text": "so I'm in am in Kyoto and it is awesome",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 4,
+      "text": "so I'm in am in Kyoto and it is awesome",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 5,
+      "text": "so I'm in a hotel room here a hotel room here a hotel room here now over the last few lectures we've now over the last few lectures we've now over the last few lectures we've built up to this architecture that is a built up to this architecture that is a built up to this architecture that is a multi-layer perceptron character level multi-layer perceptron character level multi-layer perceptron character level language model",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 6,
+      "text": "so we see that it language model",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 7,
+      "text": "so we see that it language model",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 8,
+      "text": "so we see that it receives three previous characters and receives three previous characters and receives three previous characters and tries to predict the fourth character in tries to predict the fourth character in tries to predict the fourth character in a sequence using a very simple multi a sequence using a very simple multi a sequence using a very simple multi perceptron using one hidden layer of perceptron using one hidden layer of perceptron using one hidden layer of neurons with 10ational neuralities neurons with 10ational neuralities neurons with 10ational neuralities so we'd like to do now in this lecture",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 9,
+      "text": "so we'd like to do now in this lecture",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 10,
+      "text": "so we'd like to do now in this lecture is I'd like to complexify this",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 11,
+      "text": "is I'd like to complexify this is I'd like to complexify this architecture in particular we would like architecture in particular we would like architecture in particular we would like to take more characters in a sequence as to take more characters in a sequence as to take more characters in a sequence as an input not just three and in addition an input not just three and in addition an input not just three and in addition to that we don't just want to feed them to that we don't just want to feed them to that we don't just want to feed them all into a single hidden layer because all into a single hidden layer because all into a single hidden layer because that squashes too much information too that squashes too much information too that squashes too much information too quickly instead we would like to make a quickly instead we would like to make a quickly instead we would like to make a deeper model that progressively fuses deeper model that progressively fuses deeper model that progressively fuses this information to make its guess about this information to make its guess about this information to make its guess about the next character in a sequence the next character in a sequence the next character in a sequence and so we'll see that as we make this",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 12,
+      "text": "and so we'll see that as we make this",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    },
+    {
+      "id": 13,
+      "text": "and so we'll see that as we make this architecture more complex we're actually architecture more complex we're actually architecture more complex we're actually going to arrive at something that looks going to arrive at something that looks going to arrive at something that looks very much like a wavenet very much like a wavenet very much like a wavenet the witness is this paper published by the witness is this paper published by the witness is this paper published by the point in 2016 and it is also a the point in 2016 and it is also a the point in 2016 and it is also a language model basically but it tries to language model basically but it tries to language model basically but it tries to predict audio sequences instead of predict audio sequences instead of predict audio sequences instead of character level sequences or Word level character level sequences or Word level character level sequences or Word level sequences but fundamentally the modeling sequences but fundamentally the modeling sequences but fundamentally the modeling setup is identical it is an auto setup is identical it is an auto setup is identical it is an auto aggressive model and it tries to predict aggressive model and it tries to predict aggressive model and it tries to predict next character in a sequence and the next character in a sequence and the next character in a sequence and the architecture actually takes this architecture actually takes this architecture actually takes this interesting hierarchical sort of interesting hierarchical sort of interesting hierarchical sort of approach to predicting the next approach to predicting the next approach to predicting the next character in a sequence uh with the character in a sequence uh with the",
+      "start_time": "00:00:02.570",
+      "end_time": "00:01:33.240"
+    }
+  ]
+}

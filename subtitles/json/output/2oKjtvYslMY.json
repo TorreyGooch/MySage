@@ -1,0 +1,41 @@
+{
+  "video_id": "2oKjtvYslMY",
+  "sentences": [
+    {
+      "id": 1,
+      "text": "[Music] [Music] do [Music] [Applause]",
+      "start_time": "00:00:19.750",
+      "end_time": "00:19:27.190"
+    },
+    {
+      "id": 2,
+      "text": "[Applause]",
+      "start_time": "00:00:19.750",
+      "end_time": "00:19:27.190"
+    },
+    {
+      "id": 3,
+      "text": "[Applause]",
+      "start_time": "00:00:19.750",
+      "end_time": "00:19:27.190"
+    },
+    {
+      "id": 4,
+      "text": "[Music] so so [Music]",
+      "start_time": "00:00:19.750",
+      "end_time": "00:19:27.190"
+    },
+    {
+      "id": 5,
+      "text": "[Music] so [Music] great [Applause]",
+      "start_time": "00:00:19.750",
+      "end_time": "00:19:27.190"
+    },
+    {
+      "id": 6,
+      "text": "so [Music] you [Music] foreign foreign foreign [Music]",
+      "start_time": "00:00:19.750",
+      "end_time": "00:19:27.190"
+    }
+  ]
+}

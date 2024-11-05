@@ -1,0 +1,158 @@
+import re
+import json
+import spacy
+from pathlib import Path
+import logging
+
+# Set up logging
+logging.basicConfig(
+    filename='vtt_processing.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+# Load spaCy model
+try:
+    nlp = spacy.load('en_core_web_sm')
+except OSError:
+    logging.error("Required spaCy model 'en_core_web_sm' not found. Please install it using: python -m spacy download en_core_web_sm")
+    raise
+
+def parse_timestamp(timestamp):
+    """Convert timestamp to standardized format"""
+    return re.sub(r'\.(\d{3})\d*', r'.\1', timestamp)
+
+def clean_text(text):
+    """Remove VTT formatting tags and clean text"""
+    # Remove timing tags
+    text = re.sub(r'<\d{2}:\d{2}:\d{2}\.\d{3}>', '', text)
+    # Remove formatting tags
+    text = re.sub(r'</?[^>]+>', '', text)
+    # Remove non-breaking space HTML entities
+    text = text.replace('&nbsp;', ' ')
+    # Clean extra whitespace
+    text = ' '.join(text.split())
+    return text
+
+def process_vtt_file(file_path):
+    """Process a single VTT file into structured JSON"""
+    try:
+        segments = []
+        current_text = []
+        current_start = None
+        current_end = None
+        video_id = Path(file_path).stem.split('.')[0]
+
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Skip VTT header
+        content = re.sub(r'^WEBVTT\n(?:[^\n]*\n)*\n', '', content)
+        
+        lines = content.split('\n')
+        i = 0
+        
+        while i < len(lines):
+            line = lines[i].strip()
+            
+            if not line:
+                i += 1
+                continue
+            
+            # Match timestamp line
+            timestamp_match = re.match(r'(\d{2}:\d{2}:\d{2}\.\d{3}) --> (\d{2}:\d{2}:\d{2}\.\d{3})', line)
+            if timestamp_match:
+                # Save previous segment if exists
+                if current_text and current_start:
+                    segments.append({
+                        'text': clean_text(' '.join(current_text)),
+                        'start': current_start,
+                        'end': current_end
+                    })
+                
+                # Start new segment
+                current_start = parse_timestamp(timestamp_match.group(1))
+                current_end = parse_timestamp(timestamp_match.group(2))
+                current_text = []
+                
+                # Get text lines until next timestamp or empty line
+                i += 1
+                while i < len(lines) and lines[i].strip() and not re.match(r'\d{2}:\d{2}:\d{2}', lines[i]):
+                    line_text = lines[i].strip()
+                    if line_text:
+                        current_text.append(line_text)
+                    i += 1
+                continue
+            
+            i += 1
+        
+        # Add final segment
+        if current_text and current_start:
+            segments.append({
+                'text': clean_text(' '.join(current_text)),
+                'start': current_start,
+                'end': current_end
+            })
+
+        # Verify we have segments
+        if not segments:
+            raise ValueError("No valid segments found in VTT file")
+
+        # Combine segments into sentences
+        all_text = ' '.join(seg['text'] for seg in segments)
+        doc = nlp(all_text)
+        
+        # Create sentences with timing info
+        sentences = []
+        current_sentence = []
+        sentence_start = segments[0]['start']
+        
+        for sent in doc.sents:
+            sentences.append({
+                "id": len(sentences) + 1,
+                "text": sent.text.strip(),
+                "start_time": sentence_start,
+                "end_time": segments[-1]['end']
+            })
+
+        output = {
+            "video_id": video_id,
+            "sentences": sentences
+        }
+
+        return output
+
+    except Exception as e:
+        logging.error(f"Error processing {file_path}: {str(e)}")
+        raise
+
+def process_directory(input_dir, output_dir):
+    """Process all VTT files in a directory and save JSON files"""
+    input_path = Path(input_dir)
+    output_path = Path(output_dir)
+    
+    # Create output directory if it doesn't exist
+    output_path.mkdir(parents=True, exist_ok=True)
+    
+    # Process all VTT files
+    for vtt_file in input_path.glob('*.vtt'):
+        try:
+            output = process_vtt_file(vtt_file)
+            
+            # Save to JSON file
+            json_path = output_path / f"{output['video_id']}.json"
+            with open(json_path, 'w', encoding='utf-8') as f:
+                json.dump(output, f, indent=2, ensure_ascii=False)
+                
+            logging.info(f"Successfully processed {vtt_file.name} to {json_path}")
+            
+        except Exception as e:
+            logging.error(f"Failed to process {vtt_file.name}: {str(e)}")
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) != 3:
+        print("Usage: python vtt_to_json.py <input_directory> <output_directory>")
+        sys.exit(1)
+    
+    process_directory(sys.argv[1], sys.argv[2])
